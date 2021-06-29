@@ -1,0 +1,38 @@
+{
+  "btn_ingreso_manual":
+  {
+    "value_id": "br.com.phoebus.paystore.payments.newland:id/manual_transaction_button",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ImageButton"
+  },
+  "monto_en_pantalla":
+  {
+    "value_id": "br.com.phoebus.paystore.payments.newland:id/payment_value_text",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView[2]"
+  },
+  "btn_cancelar":
+  {
+    "value_id": "br.com.phoebus.paystore.payments.newland:id/cancel_btn",
+    "value_id_qr": "br.com.phoebus.paystore.payments.newland:id/textCancelId",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[3]/android.widget.Button",
+    "value_xpath_qr": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.View/android.widget.TextView[3]"
+  },
+  "texto_en_pantalla":
+  {
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[3]/android.widget.Button"
+  },
+  "btn_consultar":
+  {
+    "value_id": "br.com.phoebus.paystore.payments.newland:id/textCheckId",
+    "value id": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.View/android.widget.TextView[2]"
+  },
+  "qr_en_pantalla":
+  {
+    "value_id": "br.com.phoebus.paystore.payments.newland:id/imageQRCodeId",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.View/android.widget.ImageView"
+  },
+  "mensaje_en_pantalla":
+  {
+    "value_id": "br.com.phoebus.paystore.payments.newland:id/textMessageId",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.View/android.widget.TextView[1]"
+  }
+}
