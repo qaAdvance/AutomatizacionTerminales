@@ -143,14 +143,6 @@ def terminar():
     btn_terminar = driver.find_element_by_id(pantallaTicket["btn_terminar"]["value_id"])
     btn_terminar.click()
 
-def VerificarPantalla(deseada):
-    actual = driver.current_activity()
-    bandera = "incorrecto"
-    if deseada == actual:
-        bandera = "correcto"
-        return bandera
-    else:
-        return bandera
 
 class TestDeTerminal(unittest.TestCase):
 
@@ -168,7 +160,6 @@ class TestDeTerminal(unittest.TestCase):
         continuar()
         time.sleep(5)#comprobar la pantalla de ticket comercio
         terminar()
-
     def tearDown(self):
         print("finalizado")
 
