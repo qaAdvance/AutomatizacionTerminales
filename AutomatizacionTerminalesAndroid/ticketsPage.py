@@ -1,5 +1,7 @@
 import json
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 a = open("pantalla_ticket.json", "r")
 b = a.read()
@@ -15,10 +17,23 @@ class TicketPage:
         self.btn_finish = (By.ID, ticketPageButtons["btn_terminar"]["value_id"])
 
     def print_client_ticket(self):
-        self.driver.find_element(*self.btn_print_ticket).click()
+        try:
+            element = WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located(self.btn_print_ticket))
+            self.driver.find_element(*self.btn_print_ticket).click()
+        except:
+            print('No se encuentra el elemento')
 
     def continue_button(self):
-        self.driver.find_element(*self.btn_continue).click()
+        try:
+            element = WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(self.btn_continue))
+            self.driver.find_element(*self.btn_continue).click()
+        except:
+            print('No se encuentra el elemento')
 
     def finish_button(self):
-        self.driver.find_element(*self.btn_finish).click()
+        try:
+            element = WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(self.btn_finish))
+            self.driver.find_element(*self.btn_finish).click()
+        except:
+            print('No se encuentra el elemento')
+
