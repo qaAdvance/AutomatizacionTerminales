@@ -1,0 +1,81 @@
+{
+  "btn_cobrar":
+  {
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[5]/android.widget.FrameLayout/android.widget.LinearLayout"
+  },
+  "btn_generar_qr":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_pay_qrcode",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[5]/android.widget.ImageButton[1]"
+  },
+  "btn_pago_dividido":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_partial_payment",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[5]/android.widget.ImageButton[2]"
+  },
+  "btn_numerico_cero":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_zero",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[4]/android.widget.Button"
+  },
+  "btn_numerico_uno":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_one",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[5]/android.widget.ImageButton[1]"
+  },
+  "btn_numerico_dos":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_two",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.Button[2]"
+  },
+  "btn_numerico_tres":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_three",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.Button[3]"
+  },
+  "btn_numerico_cuatro":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_four",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[1]"
+  },
+  "btn_numerico_cinco":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_five",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[2]"
+  },
+  "btn_numerico_seis":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_six",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[3]"
+  },
+  "btn_numerico_siete":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_seven",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[3]/android.widget.Button[1]"
+  },
+  "btn_numerico_ocho":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_eight",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[3]/android.widget.Button[2]"
+  },
+  "btn_numerico_nueve":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_nine",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[3]/android.widget.Button[3]"
+  },
+  "btn_activar_calculadora":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/toggle_calculator",
+    "value_xpath": "//android.widget.TextView[@content-desc=\"Habilitar calculadora\"]"
+  },
+  "btn_panel_funciones":
+  {
+    "value_id": "e801793e-d36d-43ae-a6fc-60cf2db6603f",
+    "value_xpath": "//android.widget.ImageButton[@content-desc=\"Abrir el panel lateral de navegación\"]"
+  },
+  "btn_borrar_numero":
+  {
+    "value_id": "br.com.phoebus.paystore.platform.newland:id/btn_del",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[4]/android.widget.ImageButton"
+  }
+}
