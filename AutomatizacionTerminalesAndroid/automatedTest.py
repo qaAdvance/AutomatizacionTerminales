@@ -10,16 +10,16 @@ class TerminalTest(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', Base.return_base(Base()))
         self.installments_page = InstallmentsPage(self.driver)
+        self.main_page = MainPage(self.driver)
+        self.tickets_page = TicketPage(self.driver)
 
     def test_buy(self):
-        self.driver.find_element_by_id("br.com.phoebus.paystore.platform.newland:id/btn_one").click()
-        self.driver.find_element_by_id("br.com.phoebus.paystore.platform.newland:id/btn_one").click()
-        self.driver.find_element_by_id("br.com.phoebus.paystore.platform.newland:id/btn_one").click()
-        self.driver.find_element_by_id("br.com.phoebus.paystore.platform.newland:id/btn_one").click()
-        self.driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.view.View/android.support.v4.view.ViewPager/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[5]/android.widget.FrameLayout/android.widget.LinearLayout").click()
-        time.sleep(10)
-        self.installments_page.installments_value("card", "7")
-        time.sleep(2)
+        self.main_page.ingresar_monto('1234')
+        self.main_page.tipo_de_pago('tarjeta')
+        self.installments_page.installments_value("card", "6")
+        self.tickets_page.print_client_ticket()
+        self.tickets_page.continue_button()
+        self.tickets_page.finish_button()
 
     def tearDown(self):
         print("finalizado")
