@@ -34,5 +34,15 @@
   {
     "value_id": "br.com.phoebus.paystore.payments.newland:id/textMessageId",
     "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.View/android.widget.TextView[1]"
+  },
+  "numero_de_tarjeta":
+  {
+    "value_id": "br.com.phoebus.paystore.payments.newland:id/credit_card",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.EditText"
+
+  },
+  "numero_tarjeta_acpetar":
+  {
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]"
   }
 }
