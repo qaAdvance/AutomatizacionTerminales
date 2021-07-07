@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7850f3f-98ec-44ab-8fdf-c1c0fb7d34f7" name="Default Changelist" comment="" />
+    <list default="true" id="c7850f3f-98ec-44ab-8fdf-c1c0fb7d34f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/automatedTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/Tests/automatedTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/Classes/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/installmentsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/Classes/installmentsPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/mainPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/Classes/mainPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/pagina_principal.json" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/Btn_mapping/pagina_principal.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/pantalla_cuotas.json" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/Btn_mapping/pantalla_cuotas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/pantalla_pago.json" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/Btn_mapping/pantalla_pago.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/pantalla_ticket.json" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/Btn_mapping/pantalla_ticket.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/pestaña_funciones.json" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/Btn_mapping/pestaña_funciones.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/ticketsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatizacionTerminalesAndroid/Classes/ticketsPage.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +61,17 @@
       <updated>1625169511107</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1625171587374">

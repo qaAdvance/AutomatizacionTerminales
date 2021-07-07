@@ -1,7 +1,7 @@
 import json
 from selenium.webdriver.common.by import By
 
-a = open("pantalla_cuotas.json", "r")
+a = open("../Btn_mapping/pantalla_cuotas.json", "r")
 b = a.read()
 InstallmentsPageButtons = json.loads(b)
 
