@@ -1,7 +1,8 @@
-import time
 import unittest
-from base import Base
-from installmentsPage import InstallmentsPage
+from AutomatizacionTerminalesAndroid.Classes.base import Base
+from AutomatizacionTerminalesAndroid.Classes.installmentsPage import InstallmentsPage
+from AutomatizacionTerminalesAndroid.Classes.mainPage import MainPage
+from AutomatizacionTerminalesAndroid.Classes.ticketsPage import TicketPage
 from appium import webdriver
 
 
