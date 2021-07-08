@@ -15,15 +15,12 @@ class TerminalTest(unittest.TestCase):
         self.tickets_page = TicketPage(self.driver)
 
     def test_buy(self):
-        self.main_page.ingresar_monto('1234')
-        self.main_page.tipo_de_pago('tarjeta')
-        self.installments_page.installments_value("card", "6")
-        self.tickets_page.print_client_ticket()
-        self.tickets_page.continue_button()
-        self.tickets_page.finish_button()
+        self.main_page.enter_amount('1234')
+        self.assertEqual(self.main_page.payment_option('d'), True, "No se pudo continuar con el pago")
 
     def tearDown(self):
         print("finalizado")
+        ###Cerrar el dispositivo
 
 
 if __name__ == '__main__':
