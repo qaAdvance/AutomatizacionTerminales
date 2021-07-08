@@ -1,5 +1,7 @@
 import json
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 a = open("../Btn_mapping/pagina_principal.json", "r")
 b = a.read()
@@ -20,15 +22,15 @@ class MainPage:
         self.btn_7 = (By.ID, mainPageButtons["btn_numerico_siete"]["value_id"])
         self.btn_8 = (By.ID, mainPageButtons["btn_numerico_ocho"]["value_id"])
         self.btn_9 = (By.ID, mainPageButtons["btn_numerico_nueve"]["value_id"])
-        self.btn_cobrar = (By.XPATH, mainPageButtons["btn_cobrar"]["value_xpath"])
+        self.btn_buy = (By.XPATH, mainPageButtons["btn_cobrar"]["value_xpath"])
         self.btn_qr = (By.ID, mainPageButtons["btn_generar_qr"]["value_id"])
-        self.btn_pago_dividido = (By.ID, mainPageButtons["btn_pago_dividido"]["value_id"])
-        self.btn_calculadora = (By.ID, mainPageButtons["btn_activar_calculadora"]["value_id"])
-        self.btn_funciones = (By.ID, mainPageButtons["btn_panel_funciones"]["value_id"])
-        self.btn_borrar = (By.ID, mainPageButtons["btn_borrar_numero"]["value_id"])
+        self.btn_split = (By.ID, mainPageButtons["btn_pago_dividido"]["value_id"])
+        self.btn_calculator = (By.ID, mainPageButtons["btn_activar_calculadora"]["value_id"])
+        self.btn_functions = (By.ID, mainPageButtons["btn_panel_funciones"]["value_id"])
+        self.btn_delete = (By.ID, mainPageButtons["btn_borrar_numero"]["value_id"])
 
-    def ingresar_monto(self, numero):
-        for n in numero:
+    def enter_amount(self, number):
+        for n in number:
             if n == "0":
                 self.driver.find_element(*self.btn_0).click()
             elif n == "1":
@@ -50,13 +52,27 @@ class MainPage:
             elif n == "9":
                 self.driver.find_element(*self.btn_9).click()
 
-    def tipo_de_pago(self, tipoDeCompra):
-        if tipoDeCompra == "tarjeta":
-            self.driver.find_element(*self.btn_cobrar).click()
-            return True
-        elif tipoDeCompra == "qr":
-            self.driver.find_element(*self.btn_qr).click()
-            return True
-        elif tipoDeCompra == "dividido":
-            self.driver.find_element(*self.btn_pago_dividido).click()
-            return True
+    def payment_option(self, paymentOption):
+        if paymentOption == "card":
+            try:
+                element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_buy))
+                self.driver.find_element(*self.btn_buy).click()
+                return True
+            except:
+                return False
+        elif paymentOption == "qr":
+            try:
+                element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_qr))
+                self.driver.find_element(*self.btn_qr).click()
+                return True
+            except:
+                return False
+        elif paymentOption == "split":
+            try:
+                element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_split))
+                self.driver.find_element(*self.btn_split).click()
+                return True
+            except:
+                return False
+        else:
+            print("try:\ncard\nqr\nsplit\nAs payment option")
