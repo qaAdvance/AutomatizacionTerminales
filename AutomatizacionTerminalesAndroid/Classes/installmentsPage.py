@@ -26,9 +26,6 @@ class InstallmentsPage:
     def installments_value(self, buy_type, installment_value):
         try:
             element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_accept))
-        except:
-            print('No se encuentra el elemento de coutas')
-        try:
             if buy_type == "card":
                 if installment_value == "1":
                     self.driver.find_element(*self.btn_accept).click()
@@ -62,5 +59,9 @@ class InstallmentsPage:
                     self.driver.find_element(*self.btn_enter_plots_qr).click()
                     self.driver.find_element(*self.btn_enter_plots_qr).send_keys(installment_value)
                     self.driver.find_element(*self.btn_accept_qr).click()
+            else:
+                print("try:\nBuy_type equal to card or qr\ninstallment_value between 1 to 99")
+            return True
         except:
             print('No se encuentra la pantalla de coutas')
+            return False
