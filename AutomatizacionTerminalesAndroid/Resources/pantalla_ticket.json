@@ -8,7 +8,6 @@
   {
     "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.ImageView"
   },
-
   "btn_imprimir_ticket":
   {
     "value_id": "br.com.phoebus.paystore.payments.newland:id/fab_proof_open_print",
