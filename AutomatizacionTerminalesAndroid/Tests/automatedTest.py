@@ -1,27 +1,33 @@
-import unittest
-from AutomatizacionTerminalesAndroid.Classes.base import Base
-from AutomatizacionTerminalesAndroid.Classes.installmentsPage import InstallmentsPage
-from AutomatizacionTerminalesAndroid.Classes.mainPage import MainPage
-from AutomatizacionTerminalesAndroid.Classes.ticketsPage import TicketPage
+import pytest
+from Methods.base import Base
+from Methods.inputs import Inputs
 from appium import webdriver
 
 
-class TerminalTest(unittest.TestCase):
-
-    def setUp(self):
+class TestCase:
+    def set_up(self):
         self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', Base.return_base(Base()))
-        self.installments_page = InstallmentsPage(self.driver)
-        self.main_page = MainPage(self.driver)
-        self.tickets_page = TicketPage(self.driver)
+        self.inputs = Inputs(self.driver)
 
-    def test_buy(self):
-        self.main_page.enter_amount('1234')
-        self.assertEqual(self.main_page.payment_option('d'), True, "No se pudo continuar con el pago")
+    def test_case_enter_amount(self):
+        assert inputs.enter_amount("1234") is True
 
-    def tearDown(self):
-        print("finalizado")
-        ###Cerrar el dispositivo
+    def test_case_payment_option(self):
+        assert inputs.payment_option("card") is True
+
+    def test_case_plots(self):
+        assert inputs.installments_value("card", "3") is True
+
+    def test_case_print_ticket(self):
+        assert inputs.print_client_ticket() is True
+
+    def test_case_continue_button(self):
+        assert inputs.continue_button() is True
+
+    def test_case_finish_button(self):
+        assert inputs.finish_button() is True
 
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main(["-v", "--alluredir=/tmp/my_allure_results", "C:/Users/jagutierrez/Documents/GitHub/AutomatizacionTerminales/AutomatizacionTerminalesAndroid/Tests/automatedTest.py"])
+
