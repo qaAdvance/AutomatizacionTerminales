@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-a = open("../Btn_mapping/pantalla_cuotas.json", "r")
+a = open("../Resources/pantalla_cuotas.json", "r")
 b = a.read()
 InstallmentsPageButtons = json.loads(b)
 
