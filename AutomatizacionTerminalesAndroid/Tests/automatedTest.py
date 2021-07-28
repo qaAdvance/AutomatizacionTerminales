@@ -1,6 +1,5 @@
-import pytest
-from Methods.base import Base
-from Methods.inputs import Inputs
+from AutomatizacionTerminalesAndroid.Methods.base import Base
+from AutomatizacionTerminalesAndroid.Methods.inputs import Inputs
 from appium import webdriver
 
 
@@ -30,4 +29,5 @@ class TestCase:
 
 if __name__ == '__main__':
     pytest.main(["-v", "--alluredir=/tmp/my_allure_results", "C:/Users/jagutierrez/Documents/GitHub/AutomatizacionTerminales/AutomatizacionTerminalesAndroid/Tests/automatedTest.py"])
+    
 

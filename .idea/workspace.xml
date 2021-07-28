@@ -44,7 +44,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+    <configuration name="Unittests for automatedTest.TerminalTest.test_buy" type="tests" factoryName="Unittests" nameIsGenerated="true">
+=======
     <configuration name="Unittests for automatedTest.TerminalTest.test_buy" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+>>>>>>> Javier
       <module name="ProyectoAuto" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,7 +80,10 @@
       <list>
         <item itemvalue="Python.automatedTest" />
         <item itemvalue="Python tests.Unittests in automatedTest.py" />
+<<<<<<< HEAD
+=======
         <item itemvalue="Python tests.Unittests for automatedTest.TerminalTest.test_buy" />
+>>>>>>> Javier
       </list>
     </recent_temporary>
   </component>
@@ -102,5 +109,34 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+<<<<<<< HEAD
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1626374123184">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1626374123184" />
+    <state width="1345" height="97" key="GridCell.Tab.0.bottom" timestamp="1626900136755">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="97" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1626900136755" />
+    <state width="1345" height="97" key="GridCell.Tab.0.center" timestamp="1626900136755">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="97" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1626900136755" />
+    <state width="1345" height="97" key="GridCell.Tab.0.left" timestamp="1626900136755">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="97" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1626900136755" />
+    <state width="1345" height="97" key="GridCell.Tab.0.right" timestamp="1626900136755">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="97" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1626900136755" />
+    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1626112405624">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1626112405624" />
+=======
+>>>>>>> Javier
   </component>
 </project>
