@@ -1,7 +1,10 @@
+from appium import webdriver
+
+
 class Base:
 
     def __init__(self):
-        self.desire_cap = {
+        self.terminal_newland = {
             "platformName": "Android",
             "platformVersion": "5.1.1",
             "deviceName": "msm8909",
@@ -10,5 +13,7 @@ class Base:
             "appActivity": "br.com.phoebus.android.platform.ui.activity.MainActivity"
         }
 
-    def return_base(self):
-        return self.desire_cap
+    @staticmethod
+    def init_driver(self, server_appium):
+        driver = webdriver.Remote(server_appium, self.terminal_newland)
+        return driver

@@ -1,18 +1,16 @@
 import pytest
 from Methods.base import Base
 from Methods.inputs import Inputs
-from appium import webdriver
 
-#Funcion SetUp
-driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', Base.return_base(Base()))
+
+driver = Base.init_driver('http://127.0.0.1:4723/wd/hub')
 inputs = Inputs(driver)
 
 
 class TestCases:
+
     @pytest.mark.parametrize("amount, option, plots, expected_result", [
         ("1000", "card", "3", True),
-        ("1100", "card", "6", True),
-        ("1200", "card", "9", True),
     ])
     def test_case_ctls_buy(self, amount, option, plots, expected_result):
         assert inputs.payment_option(amount, option) == expected_result
