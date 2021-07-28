@@ -16,7 +16,6 @@ class Inputs:
         self.btn_manual_enter = (By.ID, payment_page_buttons["btn_ingreso_manual"]["value_id"])
         self.btn_enter_card_number = (By.ID, payment_page_buttons["numero_de_tarjeta"]["value_id"])
         self.btn_text_screen = (By.ID, payment_page_buttons["mensaje_en_pantalla"]["value_id"])
-        self.btn_accept_popup = (By.XPATH, payment_page_buttons["btn_aceptar_popup"]["value_xpath"])
         self.btn_expiration_date = (By.XPATH, payment_page_buttons["expiration_date_box"]["value_xpath"])
         self.btn_cvv_code = (By.XPATH, payment_page_buttons["numero_cvv"]["value_xpath"])
         self.btn_accept_card_number = (By.XPATH, payment_page_buttons["btn_aceptar_card_number"]["value_xpath"])
