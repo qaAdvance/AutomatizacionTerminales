@@ -1,9 +1,10 @@
 import pytest
-from AutomatizacionTerminalesAndroid.Methods.base import Base
-from AutomatizacionTerminalesAndroid.Methods.inputs import Inputs
+from Methods.base import Base
+from Methods.inputs import Inputs
 from appium import webdriver
 
 #Funcion SetUp
+
 driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', Base.return_base(Base()))
 inputs = Inputs(driver)
 
@@ -24,4 +25,4 @@ class TestCases:
 
 
 if __name__ == '__main__':
-    pytest.main(["-v", "--alluredir=/tmp/my_allure_results", "C:/Users/lucas.hartman/Documents/Lucas/Tsoft/prisma/AutomatizacionTerminales/AutomatizacionTerminalesAndroid/Tests/testPlan.py"])
+    pytest.main(["-v", "--alluredir=/tmp/my_allure_results", "C:/Users/jagutierrez/Documents/GitHub/AutomatizacionTerminales/AutomatizacionTerminalesAndroid/Tests/testPlan.py"])

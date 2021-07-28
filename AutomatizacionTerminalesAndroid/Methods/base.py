@@ -12,8 +12,11 @@ class Base:
             "appPackage": "br.com.phoebus.paystore.platform.newland",
             "appActivity": "br.com.phoebus.android.platform.ui.activity.MainActivity"
         }
+        self.driver = webdriver
 
-    @staticmethod
     def init_driver(self, server_appium):
-        driver = webdriver.Remote(server_appium, self.terminal_newland)
-        return driver
+        self.driver = webdriver.Remote(server_appium, self.terminal_newland)
+        return self.driver
+
+    def return_base(self):
+        return self.terminal_newland
