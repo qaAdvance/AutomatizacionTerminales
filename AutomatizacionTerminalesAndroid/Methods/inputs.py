@@ -2,8 +2,10 @@ import json
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+import time
 
-#Crear funcion de lectura de Jsons
+'''Crear funcion de lectura de Jsons'''
+
 a = open("../Resources/pantalla_pago.json", "r")
 b = a.read()
 PaymentPageButtons = json.loads(b)
@@ -25,14 +27,19 @@ class Inputs:
 
     def __init__(self, my_driver):
         self.driver = my_driver
+        ''' botones Payment Page '''
         self.btn_manual_enter = (By.ID, PaymentPageButtons["btn_ingreso_manual"]["value_id"])
         self.btn_enter_card_number = (By.ID, PaymentPageButtons["numero_de_tarjeta"]["value_id"])
         self.btn_text_screen = (By.ID, PaymentPageButtons["mensaje_en_pantalla"]["value_id"])
-        self.btn_enter_card_number_accept = (By.ID, PaymentPageButtons["numero_tarjeta_acpetar"]["value_xpath"])
+        self.btn_accept_popup = (By.ID, PaymentPageButtons["btn_aceptar_popup"]["value_xpath"])
+        self.btn_expiration_date = (By.ID, PaymentPageButtons["expiration_date_box"]["value_id"])
+        self.btn_cvv_code = (By.ID, PaymentPageButtons["numero_cvv"]["value_id"])
+        ''' botones Ticket Page '''
+        self.print_title = (By.ID, ticketPageButtons["titulo_de_ventana"]["value_xpath"])
         self.btn_print_ticket = (By.ID, ticketPageButtons["btn_imprimir_ticket"]["value_id"])
         self.btn_continue = (By.ID, ticketPageButtons["btn_continuar"]["value_id"])
         self.btn_finish = (By.ID, ticketPageButtons["btn_terminar"]["value_id"])
-        self.print_title = (By.ID, ticketPageButtons["titulo_de_ventana"]["value_xpath"])
+        '''botones main Page'''
         self.btn_0 = (By.ID, mainPageButtons["btn_numerico_cero"]["value_id"])
         self.btn_1 = (By.ID, mainPageButtons["btn_numerico_uno"]["value_id"])
         self.btn_2 = (By.ID, mainPageButtons["btn_numerico_dos"]["value_id"])
@@ -49,6 +56,7 @@ class Inputs:
         self.btn_calculator = (By.ID, mainPageButtons["btn_activar_calculadora"]["value_id"])
         self.btn_functions = (By.ID, mainPageButtons["btn_panel_funciones"]["value_id"])
         self.btn_delete = (By.ID, mainPageButtons["btn_borrar_numero"]["value_id"])
+        '''botones Installent Page'''
         self.btn_accept = (By.ID, InstallmentsPageButtons["btn_aceptar"]["value_id"])
         self.btn_three_plots = (By.ID, InstallmentsPageButtons["btn_tres_cuotas"]["value_id"])
         self.btn_six_plots = (By.ID, InstallmentsPageButtons["btn_seis_cuotas"]["value_id"])
@@ -60,15 +68,48 @@ class Inputs:
         self.btn_twelve_plots_qr = (By.ID, InstallmentsPageButtons["btn_doce_cuotas"]["value_id_qr"])
         self.btn_enter_plots_qr = (By.ID, InstallmentsPageButtons["btn_ingresar_cuotas"]["value_id_qr"])
 
+
+    ''' VER PORQUE EL BOTON ACEPTAR NO SE ENCUNETRA'''
     def manually_enter(self, card_number):
         try:
-            btn_manual_enter_check = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located(self.btn_manual_enter))
+            btn_manual_enter_check = WebDriverWait(self.driver, 15).until(EC.presence_of_element_located(self.btn_manual_enter))
             self.driver.find_element(*self.btn_manual_enter).click()
+            btn_manual_card_check = WebDriverWait(self.driver, 15).until(EC.presence_of_element_located(self.btn_enter_card_number))
             self.driver.find_element(*self.btn_enter_card_number).send_keys(card_number)
-            self.driver.find_element(*self.btn_enter_card_number_accept).click()
-
+            self.check_accept_popup_button()
+            return True
         except:
             print("Not in payments page")
+            return False
+
+    def enter_expiration_date(self, expiration_date):
+        try:
+            btn_manual_enter_check = WebDriverWait(self.driver, 15).until(EC.presence_of_element_located(self.btn_expiration_date))
+            self.driver.find_element(*self.btn_expiration_date).send_keys(expiration_date)
+            self.check_accept_popup_button()
+
+            return True
+        except:
+            print("can't find expiration date box")
+            return False
+
+    def enter_cvv(self, cvv):
+        try:
+            btn_manual_enter_check = WebDriverWait(self.driver, 15).until(EC.presence_of_element_located(self.btn_cvv_code))
+            self.driver.find_element(*self.btn_cvv_code).send_keys(cvv)
+            self.check_accept_popup_button()
+
+            return True
+        except AssertionError:
+            print("can't find cvv enter box")
+            return False
+
+    def check_accept_popup_button(self):
+        try:
+            element = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.btn_accept_popup))
+            self.driver.find_element(*self.btn_accept_popup).click()
+        except:
+            print("No estas en la pantalla de pago total")
 
     def print_client_ticket(self):
         try:

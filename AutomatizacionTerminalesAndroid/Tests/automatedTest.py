@@ -1,5 +1,5 @@
-from Methods.base import Base
-from Methods.inputs import Inputs
+from AutomatizacionTerminalesAndroid.Methods.base import Base
+from AutomatizacionTerminalesAndroid.Methods.inputs import Inputs
 from appium import webdriver
 
 
