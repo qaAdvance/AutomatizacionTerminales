@@ -41,10 +41,20 @@
     "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.EditText"
 
   },
-  "btn_aceptar_popup":
+  "btn_aceptar_card_number":
   {
     "value_id": "br.com.phoebus.paystore.android.acquirer.prisma.newland:id/submit",
     "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]"
+  },
+  "btn_aceptar_exp_date":
+  {
+    "value_id": "br.com.phoebus.paystore.android.acquirer.prisma.newland:id/submit",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]"
+  },
+  "btn_aceptar_cvv":
+  {
+    "value_id": "br.com.phoebus.paystore.android.acquirer.prisma.newland:id/submit",
+    "value_xpath": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]"
   },
   "expiration_date_box":
   {
