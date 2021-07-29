@@ -1,4 +1,4 @@
-from Methods.complementary import Complementary
+from AutomatizacionTerminalesAndroid.Methods.complementary import Complementary
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -55,6 +55,63 @@ class Inputs:
         self.btn_twelve_plots_qr = (By.ID, installments_page_buttons["btn_doce_cuotas"]["value_id_qr"])
         self.btn_enter_plots_qr = (By.ID, installments_page_buttons["btn_ingresar_cuotas"]["value_id_qr"])
 
+    '''Compra general'''
+
+    def print_client_ticket(self):
+        try:
+            element = WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located(self.btn_print_ticket))
+            self.driver.find_element(*self.btn_print_ticket).click()
+            return True
+        except:
+            print('No se encuentro el boton de imprimir ticket')
+            return False
+
+    def continue_button(self):
+        try:
+            self.check_screen_total_pay()
+            self.driver.find_element(*self.btn_continue).click()
+            return True
+        except:
+            print('No se encuentro el boton continuar')
+            return False
+
+    def finish_button(self):
+        try:
+            element = WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(self.btn_finish))
+            self.driver.find_element(*self.btn_finish).click()
+            return True
+        except:
+            print('No se encuentro el boton de terminar')
+            return False
+
+    def payment_option(self, amount, payment_option):
+        self.enter_amount(amount)
+        if payment_option == "card":
+            try:
+                element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_buy))
+                self.driver.find_element(*self.btn_buy).click()
+                return True
+            except:
+                return False
+        elif payment_option == "qr":
+            try:
+                element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_qr))
+                self.driver.find_element(*self.btn_qr).click()
+                return True
+            except:
+                return False
+        elif payment_option == "split":
+            try:
+                element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_split))
+                self.driver.find_element(*self.btn_split).click()
+                return True
+            except:
+                return False
+        else:
+            print("try:\ncard\nqr\nsplit\nAs payment option")
+
+    '''Compra manual'''
+
     def manually_enter(self, card_number):
         try:
             btn_manual_enter_check = WebDriverWait(self.driver, 15).until(EC.presence_of_element_located(self.btn_manual_enter))
@@ -89,114 +146,7 @@ class Inputs:
             print("can't find cvv enter box")
             return False
 
-    def check_accept_card_number(self):
-        try:
-            element = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.btn_accept_card_number))
-            self.driver.find_element(*self.btn_accept_card_number).click()
-        except:
-            print("No estas en la pantalla de pago total")
-
-    def check_accept_exp_date(self):
-        try:
-            element = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.btn_accept_exp_date))
-            self.driver.find_element(*self.btn_accept_exp_date).click()
-        except:
-            print("No estas en la pantalla de pago total")
-
-    def check_accept_cvv(self):
-        try:
-            element = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.btn_accept_cvv))
-            self.driver.find_element(*self.btn_accept_cvv).click()
-        except:
-            print("No estas en la pantalla de pago total")
-
-    def print_client_ticket(self):
-        try:
-            element = WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located(self.btn_print_ticket))
-            self.driver.find_element(*self.btn_print_ticket).click()
-            return True
-        except:
-            print('No se encuentro el boton de imprimir ticket')
-            return False
-
-    def continue_button(self):
-        try:
-            self.check_screen_total_pay()
-            self.driver.find_element(*self.btn_continue).click()
-            return True
-        except:
-            print('No se encuentro el boton continuar')
-            return False
-
-    def finish_button(self):
-        try:
-            element = WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located(self.btn_finish))
-            self.driver.find_element(*self.btn_finish).click()
-            return True
-        except:
-            print('No se encuentro el boton de terminar')
-            return False
-
-    def check_screen_total_pay(self):
-        try:
-            element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.print_title))
-        except:
-            print("No estas en la pantalla de pago total")
-
-    def enter_amount(self, number):
-        try:
-            self.check_screen_main_page()
-            for n in number:
-                if n == "0":
-                    self.driver.find_element(*self.btn_0).click()
-                elif n == "1":
-                    self.driver.find_element(*self.btn_1).click()
-                elif n == "2":
-                    self.driver.find_element(*self.btn_2).click()
-                elif n == "3":
-                    self.driver.find_element(*self.btn_3).click()
-                elif n == "4":
-                    self.driver.find_element(*self.btn_4).click()
-                elif n == "5":
-                    self.driver.find_element(*self.btn_5).click()
-                elif n == "6":
-                    self.driver.find_element(*self.btn_6).click()
-                elif n == "7":
-                    self.driver.find_element(*self.btn_7).click()
-                elif n == "8":
-                    self.driver.find_element(*self.btn_8).click()
-                elif n == "9":
-                    self.driver.find_element(*self.btn_9).click()
-            return True
-        except:
-            print("No se pudo ingresar el monto")
-            return False
-
-    def payment_option(self, amount, payment_option):
-        self.enter_amount(amount)
-        if payment_option == "card":
-            try:
-                element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_buy))
-                self.driver.find_element(*self.btn_buy).click()
-                return True
-            except:
-                return False
-        elif payment_option == "qr":
-            try:
-                element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_qr))
-                self.driver.find_element(*self.btn_qr).click()
-                return True
-            except:
-                return False
-        elif payment_option == "split":
-            try:
-                element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_split))
-                self.driver.find_element(*self.btn_split).click()
-                return True
-            except:
-                return False
-        else:
-            print("try:\ncard\nqr\nsplit\nAs payment option")
+    '''Compra credito'''
 
     def installments_value(self, buy_type, installment_value):
         try:
@@ -241,8 +191,72 @@ class Inputs:
             print('No se encuentra la pantalla de coutas')
             return False
 
+    '''checks'''
+
     def check_screen_main_page(self):
         try:
             element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.btn_buy))
         except:
             print("No estas en la pantalla de pago total")
+
+    def check_accept_card_number(self):
+        try:
+            element = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.btn_accept_card_number))
+            self.driver.find_element(*self.btn_accept_card_number).click()
+        except:
+            print("can´t find accept button in card number")
+
+    def check_accept_exp_date(self):
+        try:
+            element = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.btn_accept_exp_date))
+            self.driver.find_element(*self.btn_accept_exp_date).click()
+        except:
+            print("can´t find accept button in expiration date")
+
+    def check_accept_cvv(self):
+        try:
+            element = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.btn_accept_cvv))
+            self.driver.find_element(*self.btn_accept_cvv).click()
+        except:
+            print("can´t find accept button in cvv code")
+
+    def check_screen_total_pay(self):
+        try:
+            element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.print_title))
+        except:
+            print("No estas en la pantalla de pago total")
+
+    '''Complementarias'''
+
+    def enter_amount(self, number):
+        try:
+            self.check_screen_main_page()
+            for n in number:
+                if n == "0":
+                    self.driver.find_element(*self.btn_0).click()
+                elif n == "1":
+                    self.driver.find_element(*self.btn_1).click()
+                elif n == "2":
+                    self.driver.find_element(*self.btn_2).click()
+                elif n == "3":
+                    self.driver.find_element(*self.btn_3).click()
+                elif n == "4":
+                    self.driver.find_element(*self.btn_4).click()
+                elif n == "5":
+                    self.driver.find_element(*self.btn_5).click()
+                elif n == "6":
+                    self.driver.find_element(*self.btn_6).click()
+                elif n == "7":
+                    self.driver.find_element(*self.btn_7).click()
+                elif n == "8":
+                    self.driver.find_element(*self.btn_8).click()
+                elif n == "9":
+                    self.driver.find_element(*self.btn_9).click()
+            return True
+        except:
+            print("No se pudo ingresar el monto")
+            return False
+
+    '''Funciones / Interacciones'''
+
+    '''Cierre de lote'''
