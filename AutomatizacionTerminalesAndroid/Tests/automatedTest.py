@@ -1,33 +1,17 @@
-from Methods.base import Base
-from Methods.inputs import Inputs
+from AutomatizacionTerminalesAndroid.Methods.complementary import Complementary
+from selenium.webdriver.common.by import By
+from AutomatizacionTerminalesAndroid.Methods.base import Base
 from appium import webdriver
+from appium.webdriver.common.touch_action import TouchAction
 
 
-class TestCase:
-    def set_up(self):
-        self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', Base.return_base(Base()))
-        self.inputs = Inputs(self.driver)
+function_option_menu = Complementary.read_json("../Resources/menu_funciones.json")
+main_page_buttons = Complementary.read_json("../Resources/pagina_principal.json")
+prueba = Complementary.read_json("../Resources/pantalla_paystore_token.json")
+driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', Base.return_base(Base()))
 
-    def test_case_enter_amount(self):
-        assert inputs.enter_amount("1234") is True
+input = (By.XPATH, prueba["btn_token_text_box"]["value_xpath"])
+print(input)
 
-    def test_case_payment_option(self):
-        assert inputs.payment_option("card") is True
-
-    def test_case_plots(self):
-        assert inputs.installments_value("card", "3") is True
-
-    def test_case_print_ticket(self):
-        assert inputs.print_client_ticket() is True
-
-    def test_case_continue_button(self):
-        assert inputs.continue_button() is True
-
-    def test_case_finish_button(self):
-        assert inputs.finish_button() is True
-
-
-if __name__ == '__main__':
-    pytest.main(["-v", "--alluredir=/tmp/my_allure_results", "C:/Users/jagutierrez/Documents/GitHub/AutomatizacionTerminales/AutomatizacionTerminalesAndroid/Tests/automatedTest.py"])
-    
+driver.find_element(*input).send_keys("12345678")
 

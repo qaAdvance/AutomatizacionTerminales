@@ -1,0 +1,42 @@
+{
+  "option_1":
+  {
+    "value_x": 270,
+    "value_y": 255
+  },
+  "option_2":
+  {
+    "value_x": 0,
+    "value_y": 0
+  },
+  "option_3":
+  {
+    "value_x": 0,
+    "value_y": 0
+  },
+  "option_4":
+  {
+    "value_x": 0,
+    "value_y": 0
+  },
+  "option_5":
+  {
+    "value_x": 0,
+    "value_y": 0
+  },
+  "option_6":
+  {
+    "value_x": 0,
+    "value_y": 0
+  },
+  "option_7":
+  {
+    "value_x": 0,
+    "value_y": 0
+  },
+  "option_back":
+  {
+    "value_x": 94,
+    "value_y": 115
+  }
+}

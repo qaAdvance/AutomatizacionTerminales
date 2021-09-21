@@ -68,10 +68,10 @@
     "value_id": "br.com.phoebus.paystore.platform.newland:id/toggle_calculator",
     "value_xpath": "//android.widget.TextView[@content-desc=\"Habilitar calculadora\"]"
   },
-  "btn_panel_funciones":
+  "btn_menu_lateral":
   {
-    "value_id": "e801793e-d36d-43ae-a6fc-60cf2db6603f",
-    "value_xpath": "//android.widget.ImageButton[@content-desc=\"Abrir el panel lateral de navegación\"]"
+    "value_accessibility_id": "Abrir el panel lateral de navegación",
+    "value_xpath": "//android.widget.ImageButton[@content-desc=\"Abrir el panel lateral de navegación\",]"
   },
   "btn_borrar_numero":
   {

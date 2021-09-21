@@ -11,8 +11,8 @@ inputs = Inputs(driver)
 
 class TestCases:
     @pytest.mark.parametrize("amount, option, plots, card_number, expiration_date, cvv, expected_result", [
-        ("1000", "card", "1", "4507990000001026","03/25", "830", True),
-        ("1100", "card", "3", "5300589000846764","04/27", "830", True),
+        ("1000", "card", "8", "4507990000001026", "03/25", "830", True),
+        ("1100", "card", "7", "5300589000846764", "04/27", "830", True),
     ])
     def test_case_ctls_buy(self, amount, option, plots, card_number, expiration_date, cvv, expected_result):
         assert inputs.payment_option(amount, option) == expected_result
@@ -26,4 +26,4 @@ class TestCases:
 
 
 if __name__ == '__main__':
-    pytest.main(["-v", "--alluredir=/tmp/my_allure_results", "C:/Users/lucas.hartman/Documents/Lucas/Tsoft/prisma/AutomatizacionTerminales/AutomatizacionTerminalesAndroid/Tests/testPlan.py"])
+    pytest.main(["-v", "--alluredir=/tmp/my_allure_results", "C:/PythonFramework/AutomatizacionTerminalesAndroid/Tests/testPlan.py"])

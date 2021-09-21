@@ -9,8 +9,6 @@ class Base:
             "platformVersion": "5.1.1",
             "deviceName": "msm8909",
             "automationName": "UiAutomator2",
-            "appPackage": "br.com.phoebus.paystore.platform.newland",
-            "appActivity": "br.com.phoebus.android.platform.ui.activity.MainActivity"
         }
         self.driver = webdriver
 
